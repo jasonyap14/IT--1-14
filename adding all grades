@@ -1,0 +1,22 @@
+#include<stdio.h>
+int addNumbers (int a, int b, int c, int d, int e);
+
+int main()
+{
+    int g1,g2,g3,g4,g5,sum;
+    
+    printf("Enters Numbers: ");
+    scanf("%d %d %d %d %d",&g1,&g2,&g3,&g4,&g5);
+    
+    sum = addNumbers(g1, g2, g3, g4, g5);
+    printf("sum = %d",sum);
+    
+    return 0;
+}
+
+int addNumbers (int a, int b, int c, int d, int e)
+{
+int result;
+result = a+b+c+d+e;
+return result;
+}
