@@ -1,8 +1,8 @@
 #include <stdio.h>
 void main()
 {
-  int X;
-
+  int X, Name;
+  printf("Name: Juan Dalama\n ");
   printf("Input the age of the candidate : ");
   scanf("%d",&X);
   if (X<=17)
