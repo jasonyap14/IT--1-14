@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+PrintInfo(char Sex, int Age, int id);
+Condition(int Age);
+
+int main()
+{
+    int age, id;
+    char sex;
+    //Put your Sex
+    printf("Input your Sex : ");
+    scanf("%c", & sex);
+    //Put your Id Number
+    printf("Input your ID Number : ");
+    scanf("%d", &id);
+    //Print your Age
+    printf("Input your Age : ");
+    scanf("%d", &age);
+    
+    PrintInfo (sex, age, id);
+
+    Condition(age);
+
+    return 0;
+}
+
+//Function 1 to print info
+int PrintInfo (char Sex, int Age, int id) {
+    printf("Sex : %c\n", Sex);
+    printf("ID# : %d\n", id);
+    printf("Age : %d\n", Age);
+}
+
+//Function 2, The conditioning
+int Condition (int Age) {
+    if (Age > 17) {
+        printf("You are eligible to vote\n");
+    } else {
+        printf("You are not eligible to vote\n");
+    }
+}
