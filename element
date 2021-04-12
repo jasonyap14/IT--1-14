@@ -1,0 +1,22 @@
+#include <stdio.h>
+int
+main ()
+{
+  int marks[8], i, n = 8, sum = 0, element, size;
+  
+  printf("size of array: ");
+  scanf("%d",&size);
+
+  for (i = 0; i < n; ++i)
+    {
+      printf ("Enter number%d: ", i + 1);
+      scanf ("%d", &marks[i]);
+
+      sum += marks[i];
+    }
+
+  element = sum / n;
+  printf ("Sum of all array element: %d", element);
+
+  return 0;
+}
