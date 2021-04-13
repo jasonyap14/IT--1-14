@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{        
+    //ID number and pin
+    int accounts[3][2] ={
+        {223, 223},
+        {111, 111},
+        {444, 444}
+    };
+    
+    int idd, pin, IDChecker, pinChecker;
+    
+    //Enter your ID number      
+        printf("Enter ID number: ");
+   IDChecker = scanf("%d", &idd);
+    
+    //Enter your Pin number
+        printf("\nEnter PIN: ");
+   pinChecker = scanf("%d", &pin);
+
+    if( IDChecker == 1 && pinChecker == 1 &&
+        idd == accounts[0][0] && pin == accounts[0][1] ||
+        idd == accounts[1][0] && pin == accounts[1][1] ||
+        idd == accounts[2][0] && pin == accounts[2][1]){
+        //result if Successfully
+        printf("\nYou have Successfully Logged In!\n\n");
+    }
+    //result if not valid the id or pin
+    else{
+        
+        printf("\n\nInvalid ID!/PIN\n\n\n");
+        return 0;
+    }
+
+      return 0;
+}
