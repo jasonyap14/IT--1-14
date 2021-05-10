@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[10];
+    int count = 0;
+    
+    printf("Enter any String: ");
+    gets(str);
+    
+    printf("printed within the loop ");
+    while(count < strlen(str))
+    {
+        printf("%c_",str[count]);
+        ++count;
+    }
+    
+    
+    return 0;
+}
