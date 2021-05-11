@@ -1,0 +1,30 @@
+#include <conio.h>
+ 
+ 
+int main()
+{
+    //here will defind the limit of size
+    int a[10],i,n,sum=0;
+   
+   //put the size of the array here
+    printf("Enter size of the array : ");
+    scanf("%d",&n);
+ 
+  //put the elements number
+    for(i=0; i<n; i++)
+    {
+        printf("Enter elements in array : ");
+        scanf("%d",&a[i]);
+    }
+ 
+    
+    for(i=0; i<n; i++)
+    {
+         
+        sum+=a[i];
+    }
+    //result of the all the numbers you put
+     printf("sum of array is : %d",sum);
+ 
+    return 0;
+}
