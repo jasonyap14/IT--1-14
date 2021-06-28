@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+ 
+
+
+void append(int counter,int numberOflines){
+
+    char input[255];
+
+    while( counter < numberOflines ){
+        printf("Enter a string for line %d: ", counter+1);
+        scanf("%s", input); 
+                              
+        FILE *file = fopen("C:\\text.txt", "a"); 
+
+        fputs(input, file); 
+        fputs("\n", file); 
+
+        fclose(file);    
+        counter++;
+    }
+}
+
+int main(){
+
+                                                                          
+
+    int counter = 0, numberOflines;
+
+    printf("Input how many lines to be appended: "); 
+    scanf("%d", &numberOflines);
+
+
+    append(counter, numberOflines);
+    printf("\ncheck text file to the given location. . .\n\n\n\n");
+
+  	return 0;
+
+}
