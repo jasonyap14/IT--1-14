@@ -1,0 +1,107 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void) {
+  // creating a FILE variable
+  FILE *fptr;
+  FILE *fptr2;
+
+  // mga variables
+  int id, math, science, english, totalgrade;
+  int id2, math2, science2, english2, totalgrade2;
+  int i, m, s, e, t, a;
+  int i2, m2, s2, e2, t2, a2;
+
+  float averagegrade,averagegrade2;
+
+
+  // character count
+  char name[200];
+  char n[200];
+
+  char name2[200] ;
+  char n2[200];
+
+  // process
+  fptr = fopen("student", "w");
+
+  if (fptr != NULL) {
+    printf("File created successfully!\n");
+  }
+  else {
+    printf("Failed to create the file.\n");
+    // exit status for OS that an error occured
+    return -1;
+  }
+
+  // enter the name
+  printf("\nEnter student name: ");
+  gets(name);
+  // studnent Id
+  printf("Enter student ID: ");
+  scanf("%d", &id);
+  // Math
+  printf("Math: ");
+  scanf("%d", &math);
+  // Science
+  printf("Science: ");
+  scanf("%d", &science);
+  // English
+  printf("English: ");
+  scanf("%d", &english);
+
+  totalgrade = math + science + english;
+  averagegrade = totalgrade / 3;
+
+
+  fprintf(fptr, "Name:%s\nID:%d\nMath:%d\nScience:%d\nEnglish:%d\nTotal Grade:%d\nAverage Grade:%.2f\n", name, id, math, science, english, totalgrade, averagegrade);
+
+  fclose(fptr);
+
+
+    // process
+  fptr2 = fopen("student2", "w");
+
+   if (fptr2 != NULL) {
+    printf("\nFile created successfully!\n");
+  }
+  else {
+    printf("Failed to create the file.\n");
+    // exit status for OS that an error occured
+    return -1;
+  }
+
+  // enter the name
+  printf("\nEnter student 2 name: ");
+  scanf ("%s",name2);
+  // Student id
+  printf("Enter student ID: ");
+  scanf("%d", &id2);
+  // Math
+  printf("Math: ");
+  scanf("%d", &math2);
+  // Science
+  printf("Science: ");
+  scanf("%d", &science2);
+  // English
+  printf("English: ");
+  scanf("%d", &english2);
+
+  totalgrade2 = math2 + science2 + english2;
+  averagegrade2 = totalgrade2 / 3;
+
+  fprintf(fptr2, "Name:%s\nID:%d\nMath:%d\nScience:%d\nEnglish:%d\nTotal Grade:%d\nAverage Grade:%.2f\n", name2, id2, math2, science2, english2, totalgrade2, averagegrade2);
+
+  fclose(fptr2);
+
+
+  fptr = fopen("student", "r");
+  fptr2 = fopen("student2", "r");
+
+
+
+  fclose(fptr);
+    fclose(fptr2);
+
+  return 0;
+}
